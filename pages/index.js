@@ -1,24 +1,43 @@
-import Head from 'next/head'
+import { useState } from 'react'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import About from '@components/About'
+import Projects from '@components/Projects'
 
 export default function Home() {
+  const [contenctSelect, setContentSelect] = useState('about')
+
+
+  function showContent() {
+    switch(contenctSelect) {
+      case 'about':
+        console.log('ata')
+        return <About/>
+      case 'projects':
+      return <Projects/>
+      case 'contact':
+        return <div>Contact</div>
+      default:
+        return <div>About</div>
+    }
+  }
+
   return (
     <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-    THIS IS AN ADDITION
-        </p>
-      </main>
-
-      <Footer />
+      <div className='head'>
+        <h1>Joel Ward</h1>
+        <div className='navigator'>
+          <a onClick={() => setContentSelect('about')} className={contenctSelect === 'about'? 'selectedNav':''}>About</a>
+          <a onClick={() => setContentSelect('projects')} className={contenctSelect === 'projects'? 'selectedNav':''}>Projects</a>
+          <a onClick={() => setContentSelect('contact')} className={contenctSelect === 'contact'? 'selectedNav':''}>Contact</a>
+        </div>
+      </div>
+      <div className='mainContent'>
+        {showContent()}
+      </div>
+      <div className='footer'>
+        Footer
+      </div>
     </div>
   )
 }
