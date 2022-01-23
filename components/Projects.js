@@ -6,7 +6,6 @@ export default function Projects() {
     return(
       <div className='projectItem'>
         <h1>{p.title}</h1>
-        <img src='https://via.placeholder.com/400x400'/>
         <p>{p.description}</p>
       </div>
     )

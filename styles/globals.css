@@ -123,15 +123,19 @@ body {
 .projectsGrid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 .projectItem{
+  color: wheat;
   margin: 20px;
   width: 500px;
   height: 600px;
+  background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  filter: grayscale(90%);
 }
 
 .projectItem:hover {
-  background-color: rgba(0, 206, 209, 0.151);
+  filter: grayscale(0%);
   cursor: pointer;
 }

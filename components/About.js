@@ -7,7 +7,7 @@ export default function About() {
       <div className='aboutContent'>
           <div className='aboutContentFirst'>
             <div className='leftPhoto'>
-                <img src='https://via.placeholder.com/600x400'/>
+                <img width={'600px'} src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80'/>
             </div>
             <div className='rightText'>
                 Sed ut perspiciatis unde omnis iste natus error sit 
@@ -48,7 +48,7 @@ export default function About() {
                 quo voluptas nulla pariatur?
             </div>
             <div className='rightPhoto'>
-                <img src='https://via.placeholder.com/600x400'/>
+            <img width={'600px'} src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80'/>
             </div>
 
           </div>
