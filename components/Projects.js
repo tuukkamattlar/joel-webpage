@@ -1,12 +1,26 @@
 import styles from './Footer.module.css'
 
 export default function Projects() {
+
+  function ProjectItem(p) {
+    return(
+      <div className='projectItem'>
+        <h1>{p.title}</h1>
+        <img src='https://via.placeholder.com/400x400'/>
+        <p>{p.description}</p>
+      </div>
+    )
+  }
+
   return (
     <>
       <h1>Projects</h1>
-      <div>
-        <h2>Project 1</h2>
-        <p>Ata</p>
+      <div className='projectsGrid'>
+        <ProjectItem title={'Project 1'} description={'content'}/>
+        <ProjectItem title={'Project 1'} description={'content'}/>
+        <ProjectItem title={'Project 1'} description={'content'}/>
+        <ProjectItem title={'Project 1'} description={'content'}/>
+        <ProjectItem title={'Project 1'} description={'content'}/>
       </div>
     </>
   )

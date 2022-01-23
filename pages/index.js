@@ -26,6 +26,7 @@ export default function Home() {
     <div className="container">
       <div className='head'>
         <h1>Joel Ward</h1>
+        <h2>Producer, musician</h2>
         <div className='navigator'>
           <a onClick={() => setContentSelect('about')} className={contenctSelect === 'about'? 'selectedNav':''}>About</a>
           <a onClick={() => setContentSelect('projects')} className={contenctSelect === 'projects'? 'selectedNav':''}>Projects</a>
