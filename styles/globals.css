@@ -132,6 +132,6 @@ body {
 }
 
 .projectItem:hover {
-  background-color: darkturquoise;
+  background-color: rgba(0, 206, 209, 0.151);
   cursor: pointer;
 }
