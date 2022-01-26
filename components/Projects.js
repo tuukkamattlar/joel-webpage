@@ -13,7 +13,6 @@ export default function Projects() {
 
   return (
     <>
-      <h1>Projects</h1>
       <div className='projectsGrid'>
         <ProjectItem title={'Project 1'} description={'content'}/>
         <ProjectItem title={'Project 1'} description={'content'}/>

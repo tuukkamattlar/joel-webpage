@@ -5,13 +5,10 @@ export default function Contact() {
 
   return (
     <>
-      <h1>
-        Contact
-      </h1>
       <p className="formInfo">
         {loremIpsum}
       </p>
-      <div>
+      <div className='aboutContent'>
         <form className="form">
           <p>
           <label for="name">Name</label>
