@@ -35,8 +35,9 @@ body {
 .footer{
   height: 10vh;
   width: 100%;
-  background: #000000;
-  color: beige;
+  background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  filter: grayscale(90%);
+  color: aliceblue;
   align-items: center;
   text-align: center;
   padding-top: 10px;
@@ -54,6 +55,30 @@ body {
 .navigator {
   font-size: 2.5rem;
   font-weight: 300;
+}
+.submitButton>a>#text {
+  background-color: gainsboro;
+}
+
+.submitButton>a {
+  color: rgb(0, 0, 0);
+  position: relative;
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.submitButton>a::before {
+  background: #A3E4DB;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease-in-out;
+  z-index: -1;
 }
 
 .navigator>a {
@@ -74,11 +99,12 @@ body {
   transition: transform 0.2s ease-in-out;
   z-index: -1;
 }
-.navigator>a:hover {
+.navigator>a:hover, .submitButton>a:hover {
   cursor: pointer;
+  font-weight: 800;
 }
 
-.navigator>a:hover::before {
+.navigator>a:hover::before, .submitButton>a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -87,38 +113,153 @@ body {
   text-decoration: underline !important;
 }
 
-@media screen and (min-width: 1100px) {
-  .aboutContent {
+.formInfo{
+  padding-top: 70px;
+  margin: auto;
+  max-width: 1000px;
+  padding-inline: 20px;
+}
 
+/*
+MOBILE
+*/
+
+@media screen and (max-width: 1100px){
+  .addMediumPaddingTop {
+    margin-top: 30px;
+  }
+
+  .addLargePaddingTop {
+    margin-top: 70px;
+  }
+  .addPaddingBottom {
+    margin-bottom: 100px;
   }
   
-  .aboutContentFirst, .aboutContentSecond {
+  .aboutText{
+    padding-top: 50px;
+    padding-inline: 30px;
     text-align: left;
-    height: 500px;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
-  .leftPhoto {
-    max-width: 60%;
-    float: left;
+  .aboutPhoto>img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain
   }
-  
-  .rightText  {
-    margin-left: 20px;
-    max-width: 40%;
-    float: left;
+
+  .allWidthMid{
+    margin-top: 20px;
+    max-height: 300px;
+    overflow: hidden;
   }
-  .rightPhoto {
-    max-width: 60%;
-    float: left;
+  .allWidthMid>img {
+    max-width: 100%;
+    max-height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
-  
-  .leftText  {
-    margin-left: 20px;
-    max-width: 40%;
-    float: left;
+  .form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .form>p{
+    padding-top: 20px;
+  }
+  .form>p>label {
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding-right: 20px;
+  }
+
+  .form>p>input,.form>p>textarea {
+    min-height: 40px;
+    width: 300px;
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .form>p>label {
+    width: 300px;
+
+    background-color: goldenrod;
   }
 }
 
+/*
+DESKTOP
+*/
+
+@media screen and (min-width: 1100px) {
+  .addMediumPaddingTop {
+    margin-top: 100px;
+  }
+
+  .addLargePaddingTop {
+    margin-top: 150px;
+  }
+  .addPaddingBottom {
+    margin-bottom: 100px;
+  }
+  .aboutContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutPhoto{
+    width: 50%;
+    margin-inline:30px
+  }
+  .aboutPhoto>img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .aboutText{
+    width: 40%;
+    padding-inline: 10px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+
+  .allWidthMid{
+    max-height: 300px;
+    overflow: hidden;
+  }
+  .allWidthMid>img {
+    max-width: 100%;
+    max-height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: hue-rotate(-140deg);
+  }
+  .form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .form>p{
+    padding-top: 20px;
+  }
+  .form>p>label {
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding-right: 20px;
+  }
+
+  .form>p>input,  .form>p>textarea {
+    min-height: 40px;
+    min-width: 300px;
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: 'Roboto Mono', monospace;
+  }
+}
 
 .projectsGrid {
   display: flex;

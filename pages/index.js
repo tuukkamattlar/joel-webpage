@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Header from '@components/Header'
-import Footer from '@components/Footer'
 import About from '@components/About'
 import Projects from '@components/Projects'
+import Contact from '@components/Contact'
 
 export default function Home() {
   const [contenctSelect, setContentSelect] = useState('about')
@@ -11,14 +11,13 @@ export default function Home() {
   function showContent() {
     switch(contenctSelect) {
       case 'about':
-        console.log('ata')
         return <About/>
       case 'projects':
-      return <Projects/>
+        return <Projects/>
       case 'contact':
-        return <div>Contact</div>
+        return <Contact/>
       default:
-        return <div>About</div>
+        return <About/>
     }
   }
 
