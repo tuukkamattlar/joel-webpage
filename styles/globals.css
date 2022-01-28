@@ -16,16 +16,96 @@ body {
   align-items: center;
 }
 
-.head {
-  height: 15vh;
+.headPhoto {
+  position: absolute;
+  top: 0;
   width: 100%;
-  padding: 10px;
-  align-items: center;
-  text-align: center;
+  height: 300px;
+  overflow: hidden;
+  z-index: -1;
+  filter: invert() brightness(40%) ;
 }
 
-.mainContent {
+.head {
+  height: 300px;
+  width: 100%;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.headMobile {
+  height: 300px;
+  width: 100%;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.albums {
   padding-top: 20px;
+  height: fit-content;
+  max-height: 50vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.albumCoverItem {
+  height: 15vw;
+  width: 15vw;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.albumCoverItem:hover>img{
+  filter: brightness(20%);
+  transition: all 0.2s ease-in-out;
+}
+
+.albumCoverItem>img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.albumText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.albumCoverItem:hover>.albumText {
+  z-index: +1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.mainContent {
+  padding-top: 0;
   width: 100%;
   min-height: 75vh;
   align-items: center;
@@ -49,7 +129,7 @@ body {
   font-weight: 800;
 }
 .head>h1:hover {
-  color: rgb(58, 58, 58);
+  color: rgb(224, 224, 224);
 }
 
 .navigator {
@@ -82,7 +162,7 @@ body {
 }
 
 .navigator>a {
-  color: #000;
+  color: rgb(255, 255, 255);
   position: relative;
   margin: 20px;
   padding: 10px;
@@ -90,7 +170,7 @@ body {
 }
 
 .navigator>a::before {
-  background: #A3E4DB;
+  background: #000000;
   content: "";
   inset: 0;
   position: absolute;
