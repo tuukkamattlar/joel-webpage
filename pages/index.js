@@ -56,9 +56,6 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div className='headPhoto'>
-        <img width={width} src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80'/>
-      </div>
       <NaviBar/>
       
       <div className='mainContent'>

@@ -1,0 +1,39 @@
+[
+    {
+        "Comment": "Lissä tässä albumikuvia sivun alkuun. Ota mallia elementeistä käyttäen SAMOJA KEY-nimiä!"
+    },
+    [
+        {
+            "name": "Unesi ääni",
+            "artist": "Emmi U. Quintet",
+            "action": "Singing",
+            "imgfile": "unesiAani.jpg",
+            "year": 2020,
+            "linkto": "https://www.discogs.com/release/20492125-Somnium-Ensemble-Unesi-%C3%84%C3%A4ni"
+        },
+        {
+            "name": "My bird",
+            "artist": "Emmi U. Quintet",
+            "action": "Engineering",
+            "imgfile": "myBird.jpg",
+            "year": 2020,
+            "linkto": "https://www.discogs.com/release/20492125-Somnium-Ensemble-Unesi-%C3%84%C3%A4ni"
+        },
+        {
+            "name": "My bird",
+            "artist": "Emmi U. Quintet",
+            "action": "Engineering",
+            "imgfile": "myBird.jpg",
+            "year": 2020,
+            "linkto": "https://www.discogs.com/release/20492125-Somnium-Ensemble-Unesi-%C3%84%C3%A4ni"
+        },
+        {
+            "name": "My bird",
+            "artist": "Emmi U. Quintet",
+            "action": "Engineering",
+            "imgfile": "myBird.jpg",
+            "year": 2020,
+            "linkto": "https://www.discogs.com/release/20492125-Somnium-Ensemble-Unesi-%C3%84%C3%A4ni"
+        }
+    ]
+]

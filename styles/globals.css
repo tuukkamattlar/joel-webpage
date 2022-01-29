@@ -32,7 +32,7 @@ body {
   padding-top: 10px;
   align-items: center;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(75, 75, 75);
 }
 
 .headMobile {
@@ -41,7 +41,7 @@ body {
   padding-top: 10px;
   align-items: center;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(59, 58, 58);
 }
 
 .albums {
@@ -54,31 +54,38 @@ body {
   justify-content: center;
 }
 
-.albumCoverItem {
+.albumCoverUpperItem {
+  max-width: 300px;
+  max-height: 300px;
   height: 15vw;
   width: 15vw;
-  min-height: 200px;
-  min-width: 200px;
-  margin: 0px;
+  min-height: 150px !important;
+  min-width: 150px !important;
+  margin: 5px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: relative;
   text-align: center;
   cursor: pointer;
-}
-.albumCoverItem:hover>img{
-  filter: brightness(20%);
-  transition: all 0.2s ease-in-out;
-}
-
-.albumCoverItem>img {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+.albumCoverUpperItem:hover>.albumCoverImg{
+  filter: brightness(50%);
+  transform: scale(1.04);
+  transform-origin: 50% 50%;
+  transition: all 0.2s ease-in-out;
+}
+.albumCoverUpperItem>.albumCoverImg{
+  filter: brightness(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.albumCoverUpperItem {
   filter: brightness(100%);
   transition: all 0.2s ease-in-out;
 }
@@ -93,7 +100,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.albumCoverItem:hover>.albumText {
+.albumCoverUpperItem:hover>.albumText {
   z-index: +1;
   position: absolute;
   top: 50%;
@@ -129,7 +136,7 @@ body {
   font-weight: 800;
 }
 .head>h1:hover {
-  color: rgb(224, 224, 224);
+  color: rgb(54, 53, 53);
 }
 
 .navigator {
@@ -162,7 +169,7 @@ body {
 }
 
 .navigator>a {
-  color: rgb(255, 255, 255);
+  color: rgb(83, 83, 83);
   position: relative;
   margin: 20px;
   padding: 10px;
@@ -170,7 +177,7 @@ body {
 }
 
 .navigator>a::before {
-  background: #000000;
+  background: #e2610b;
   content: "";
   inset: 0;
   position: absolute;
@@ -181,6 +188,7 @@ body {
 }
 .navigator>a:hover, .submitButton>a:hover {
   cursor: pointer;
+  color: beige;
   font-weight: 800;
 }
 
