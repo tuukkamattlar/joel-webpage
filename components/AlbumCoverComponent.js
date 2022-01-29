@@ -26,10 +26,10 @@ export default function AlbumCoverComponent() {
                 <div style={styleSheet} className='albumCoverImg' >
                 </div>
                 <div className='albumText'>
-                    <h3>{i.name}</h3>
-                    <h5>{i.artist}</h5>
-                    <h5>{i.action}</h5>
-                    <h5>{i.year}</h5>
+                    <div>{i.name} </div>
+                    <div>{i.artist}</div>
+                    <div>{i.action}</div>
+                    <div>{i.year}</div>
                 </div>
             </div>
         </a>

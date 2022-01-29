@@ -1,3 +1,11 @@
+:root {
+  --white: #ffffff;
+  --lgrey: #E8EDDF;
+  --yellow: #F5CB5C;
+  --black: #242423;
+  --dgrey:#333533;
+}
+
 html,
 body {
   padding: 0;
@@ -32,7 +40,8 @@ body {
   padding-top: 10px;
   align-items: center;
   text-align: center;
-  color: rgb(75, 75, 75);
+  color: var(--lgrey);
+  background: linear-gradient(var(--black),var(--dgrey));
 }
 
 .headMobile {
@@ -41,7 +50,8 @@ body {
   padding-top: 10px;
   align-items: center;
   text-align: center;
-  color: rgb(59, 58, 58);
+  background: var(--dgrey);
+  color: var(--lgrey);
 }
 
 .albums {
@@ -92,22 +102,33 @@ body {
 
 .albumText{
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   color: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.albumText>div {
+  height: 20%;
 }
 
 .albumCoverUpperItem:hover>.albumText {
   z-index: +1;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  color: rgb(255, 255, 255);
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+  color: var(--lgrey);
   transform: translate(-50%, -50%);
   transition: all 0.2s ease-in-out;
+
 }
 
 
@@ -124,7 +145,7 @@ body {
   width: 100%;
   background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
   filter: grayscale(90%);
-  color: aliceblue;
+  color: var(--lgrey);
   align-items: center;
   text-align: center;
   padding-top: 10px;
@@ -136,7 +157,7 @@ body {
   font-weight: 800;
 }
 .head>h1:hover {
-  color: rgb(54, 53, 53);
+  color: var(--white)
 }
 
 .navigator {
@@ -144,7 +165,7 @@ body {
   font-weight: 300;
 }
 .submitButton>a>#text {
-  background-color: gainsboro;
+  background-color: var(--yellow);
 }
 
 .submitButton>a {
@@ -158,7 +179,7 @@ body {
 }
 
 .submitButton>a::before {
-  background: #A3E4DB;
+  background: var(--yellow) !important;
   content: "";
   inset: 0;
   position: absolute;
@@ -169,15 +190,16 @@ body {
 }
 
 .navigator>a {
-  color: rgb(83, 83, 83);
+  color: var(--lgrey);
   position: relative;
   margin: 20px;
   padding: 10px;
   text-decoration: none;
+  z-index: +1;
 }
 
 .navigator>a::before {
-  background: #e2610b;
+  background: var(--yellow) !important;
   content: "";
   inset: 0;
   position: absolute;
@@ -188,7 +210,7 @@ body {
 }
 .navigator>a:hover, .submitButton>a:hover {
   cursor: pointer;
-  color: beige;
+  color: var(--dgrey);
   font-weight: 800;
 }
 
@@ -272,7 +294,6 @@ MOBILE
   }
   .form>p>label {
     width: 300px;
-    background-color: goldenrod;
   }
 }
 
@@ -356,7 +377,7 @@ DESKTOP
 }
 
 .projectItem{
-  color: wheat;
+  color: var(--lgrey);
   margin: 20px;
   width: 600px;
   height: 600px;
