@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@components/Header'
 import About from '@components/About'
 import Projects from '@components/Projects'
@@ -44,7 +44,7 @@ export default function Home() {
           <div className='headMobile'>
             <h1>Joel Ward</h1>
             <h2>Producer, musician</h2>
-            <div className=''>
+            <div className='navigator'>
               <a onClick={() => setContentSelect('about')} className={contenctSelect === 'about'? 'selectedNav':''}>About</a>
               <a onClick={() => setContentSelect('projects')} className={contenctSelect === 'projects'? 'selectedNav':''}>Projects</a>
               <a onClick={() => setContentSelect('contact')} className={contenctSelect === 'contact'? 'selectedNav':''}>Contact</a>
